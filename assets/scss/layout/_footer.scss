@@ -1,0 +1,105 @@
+/*
+================================================================================
+|                                     FOOTER                                   |
+================================================================================
+*/
+footer {
+  text-align: left;
+  width: 100%;
+  min-width: $min-width;
+  order: 3;
+  -webkit-order: 3;
+  padding-top: 3em;
+  padding-bottom: 4em;
+  background-color: $color-3;
+  .mobile-logo {
+    width: 80px;
+  }
+}
+
+.menu {
+  &.horizontal {
+    flex-direction: column;
+    li {
+      &.title {
+        a {
+          text-transform: uppercase;
+          color: $color-2;
+          padding-bottom: 0.75em;
+        }
+      }
+      a {
+        color: #fff;
+        padding: 0.25em 0;
+        display: block;
+        &:hover {
+          color: $color-2;
+        }
+      }
+    }
+  }
+}
+
+.subscribe {
+  label {
+    font-size: 140%;
+    color: $color-2;
+    display: block;
+    padding-bottom: 0.75em;
+  }
+
+  input[type="email"] {
+    border: 1px solid $color-2;
+    background-color: transparent;
+    color: $color-2;
+    padding: 1em;
+    width: 100%;
+  }
+
+  button[type="submit"] {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+  }
+}
+
+.social_buttons {
+  justify-content: space-around;
+  li {
+    padding: 0.5em;
+    a {
+      color: white;
+      font-size: 150%;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+
+}
+
+@media screen and (min-width: 992px) {
+
+}
+
+@media screen and (max-width: 991px) {
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+}
+
+@media screen and (max-width: 767px) {
+
+}
+
+@media screen and (min-width: 641px) {
+
+}
+
+@media screen and (max-width: 640px) {
+
+}

@@ -1,0 +1,73 @@
+// Sizes
+$large: 1023px;
+$medium: 777px;
+
+//GRID
+
+* {
+  box-sizing: border-box;
+}
+
+*:after, *:before {
+  box-sizing: inherit;
+}
+
+.grid {
+  max-width: $max-width;
+  margin: auto;
+  display: block;
+  padding-right: 1em;
+  padding-left: 1em;
+  &.full {
+    max-width: 100%;
+  }
+}
+
+.grid-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -1em;
+  margin-left: -1em;
+}
+
+.cell {
+  position: relative;
+  min-height: 1px;
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+@media screen and (max-width:$large) {
+  [class*="large-"] {width: 100%;flex-basis:100%}
+}
+
+@media screen and (max-width:$medium){
+  [class*="medium-"] {width: 100%;flex-basis:100%}
+}
+
+$columns: 12;
+$i: $columns;
+
+@while $i > 0 {
+
+  .small-#{$i} {
+    width: 100%/$columns * $i;flex-basis: 100%/$columns * $i;
+    &-offset {margin-left: 100%/$columns * $i;}
+  }
+
+  .medium-#{$i} {
+    @media screen and (min-width: $medium+1) {
+      width: 100%/$columns * $i;flex-basis: 100%/$columns * $i;
+    }
+    @media screen and (min-width:$medium+1) {&-offset {margin-left:100%/$columns * $i;}}
+  }
+
+  .large-#{$i} {
+    @media screen and (min-width: $large+1){
+      width: 100%/$columns * $i;flex-basis: 100%/$columns * $i;
+    }
+    @media screen and (min-width:$large+1) {&-offset {margin-left:100%/$columns * $i;}}
+  }
+
+  $i: $i - 1;
+}
