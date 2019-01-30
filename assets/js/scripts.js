@@ -8,10 +8,7 @@ $(document).ready(function () {
     $('[data-toggle]').on('click', function () {
         var $toggle_obj = $($(this).attr('data-toggle'));
 
-        if ($toggle_obj.attr('id') === 'main-menu')
-            $toggle_obj.animate($toggle_obj.height() > 2 ? {height: 0} : {height: $toggle_obj.children().height()});
-        else {
-            $toggle_obj.animate($toggle_obj.height() > 2 ? {height: 0} : {height: $toggle_obj.children().height()});
-        }
+        $toggle_obj.animate($toggle_obj.height() > 2 ? {height: 0} : {height: $toggle_obj.children().height()});
+
     });
 });
